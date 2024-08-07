@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  button {
+    background-color: #4caf50;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  button:hover {
+    background-color: #45a049;
+  }
+  p {
+    margin-top: 20px;
+  }
+</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slide Puzzle</title>
+  <link rel="stylesheet" href="puzzle.css">
+  <script src="puzzle.js"></script>
+  <style>
+    body {
+      background-image: url('back3.jpg');
+      background-size: cover;
+    }
+  </style>
+</head>
+
+<body>
+  <img id="title" src="./logo.png">
+  <div id="board"></div>
+  <h1>Turns: <span id="turns">0</span></h1>
+</body>
+<div style="display: flex; justify-content: center; margin-top: 20px;">
+  <a href="menu.html">
+    <button onclick="returnToStart()">Return</button>
+    </a>
+    <a href="thank.html">
+      <button onclick="finish()">Finish</button>
+      </a>
+</html>

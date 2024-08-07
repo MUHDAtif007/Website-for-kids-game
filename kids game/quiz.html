@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      background-image: url('back.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      font-family: 'Comic Sans MS', cursive;
+      color: #000000;
+    }
+    h1, h2 {
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    .correct {
+      color: green;
+    }
+    .incorrect {
+      color: red;
+    }
+    img {
+      border: 2px solid black;
+      height: 150px;
+      width: 150px;
+    
+    }
+    button {
+      background-color: #4caf50;
+      color: #ffffff;
+      font-weight: bold;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    p {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+<body>
+  <h1>Color Quiz for Kindergarten Kids</h1>
+
+  <div id="question1">
+    <h2>Question 1:</h2>
+    <img src="Banana.png" alt="Banana">
+    <p>What color is a banana?</p>
+    <button onclick="checkAnswer('b')">a) Yellow</button>
+    <button onclick="checkAnswer('a')">b) Blue</button>
+    <p id="answer1"></p>
+    <button onclick="showNextQuestion(2)">Next Question</button>
+  </div>
+
+  <div id="question2" style="display: none;">
+    <h2>Question 2:</h2>
+    <img src="Sun.png" alt="Sun">
+    <p>What color is the sun?</p>
+    <button onclick="checkAnswer('a')">a) Green</button>
+    <button onclick="checkAnswer('b')">b) Yellow</button>
+    <p id="answer2"></p>
+    <button onclick="showNextQuestion(3)">Next Question</button>
+  </div>
+
+  <div id="question3" style="display: none;">
+    <h2>Question 3:</h2>
+    <img src="Grass.png" alt="Grass">
+    <p>What color is grass?</p>
+    <button onclick="checkAnswer('a')">a) Pink</button>
+    <button onclick="checkAnswer('b')">b) Green</button>
+    <p id="answer3"></p>
+    <button onclick="showNextQuestion(4)">Next Question</button>
+  </div>
+
+  <div id="question4" style="display: none;">
+    <h2>Question 4:</h2>
+    <img src="Orange.jpg" alt="Orange">
+    <p>What color is an orange?</p>
+    <button onclick="checkAnswer('a')">a) Purple</button>
+    <button onclick="checkAnswer('b')">b) Orange</button>
+    <p id="answer4"></p>
+    <button onclick="showNextQuestion(5)">Next Question</button>
+  </div>
+
+  <div id="question5" style="display: none;">
+    <h2>Question 5:</h2>
+    <img src="Frog.jpg" alt="Sky">
+    <p>What color is the frog?</p>
+    <button onclick="checkAnswer('a')">a) Yellow</button>
+    <button onclick="checkAnswer('b')">b) Green</button>
+    <p id="answer5"></p>
+    <button onclick="showNextQuestion(1)">Restart Quiz</button>
+  </div>
+
+  <script>
+    var currentQuestion = 1;
+
+    function showNextQuestion(questionNumber) {
+      document.getElementById('question' + currentQuestion).style.display = 'none';
+      document.getElementById('question' + questionNumber).style.display = 'block';
+      currentQuestion = questionNumber;
+    }
+
+    function checkAnswer(selectedOption) {
+      var answerElement = document.getElementById('answer' + currentQuestion);
+      if (selectedOption === 'b') {
+        answerElement.innerHTML = 'Correct!';
+        answerElement.className = 'correct';
+      } else {
+        answerElement.innerHTML = 'Wrong!';
+        answerElement.className = 'incorrect';
+      }
+    }
+  </script>
+
+</body>
+<div style="display: flex; justify-content: center; margin-top: 20px;">
+  <a href="menu.html">
+    <button onclick="returnToStart()">Return</button>
+    </a>
+    <a href="thank.html">
+      <button onclick="finish()">Finish</button>
+      </a>
+</html>

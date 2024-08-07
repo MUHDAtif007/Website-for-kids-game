@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>KidZone</title>
+  <style>
+    body {
+      background-image: url('welcome.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 100px;
+    }
+    
+    h1 {
+      color: yellow;
+      font-size: 48px;
+      margin-bottom: 30px;
+    }
+    
+    .enter-button {
+      background-color: #ff6699;
+      color: #ffffff;
+      font-size: 24px;
+      padding: 10px 30px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    
+    .enter-button:hover {
+      background-color: #ff3377;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to KidZone</h1>
+  <a href="menu.html">
+    <button class="enter-button" onclick="enterKidZone()">Enter</button>
+  </a>
+
+  <script>
+    function enterKidZone() {
+      // Handle the logic to navigate to the KidZone
+      // You can redirect to another page or perform any desired action here
+      alert("Entering KidZone!");
+    }
+  </script>
+</body>
+</html>
